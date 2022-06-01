@@ -3,13 +3,13 @@ const router = require('express').Router();
 
 router.route("/addStudent").post(( req , res)=>{
     
-    const fname = req.body.fname;
-    const lname = req.body.lname;
-    const email = req.body.email;
-    const mobileno = Number(req.body.mobileno);
-    const gender = req.body.gender;
-    const password1 = String(req.body.password1);
-    const password2 = String(req.body.password2);
+    const fname = req.body.stufname;
+    const lname = req.body.stulname;
+    const email = req.body.stuemail;
+    const mobileno = Number(req.body.stucontact);
+    const gender = req.body.stugender;
+    const password1 = String(req.body.stupassword1);
+    const password2 = String(req.body.stupassword2);
 
     const newStudent = new Student({
         fname,
