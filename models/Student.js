@@ -4,31 +4,31 @@ const Schema = mongoose.Schema;
 
 const studentSchema = new Schema({
 
-    fname : {
+    stufname : {
         type : String,
         required : true,
     },
-    lname : {
+    stulname : {
         type : String,
         required : true,
     },
-    email : {
+    stuemail : {
         type : String,
         required : true,
     },
-    mobileno : {
+    stumobileno : {
         type : Number,
         required : true,
     },
-    gender : {
+    stugender : {
         type : String,
         required : true
     },
-    password1 : {
+    stupassword1 : {
         type : String,
         required : true
     },
-    password2 : {
+    stupassword2 : {
         type : String,
         required : true
     },

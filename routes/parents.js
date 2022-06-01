@@ -6,12 +6,12 @@ router.route("/addParent").post((req,res)=>{
     const parfname = req.body.parfname;
     const parlname = req.body.parlname;
     const paremail = req.body.paremail;
-    const parmobileno = Number(req.body.parmobileno);
+    const parmobileno = Number(req.body.parcontact);
     const pargender = req.body.pargender;
     const paraddress = req.body.paraddress;
-    // const parpassword1 = String(req.body.parpassword1);
-    // const parpassword2 = String(req.body.parpassword2);
-    const parpassword = String(req.body.parpassword);
+    const parpassword1 = String(req.body.parpassword1);
+    const parpassword2 = String(req.body.parpassword2);
+    // const parpassword = String(req.body.parpassword);
 
     const newParent = new Parent({
         parfname,
@@ -20,9 +20,9 @@ router.route("/addParent").post((req,res)=>{
         parmobileno,
         pargender,
         paraddress,
-        // parpassword1,
-        // parpassword2
-        parpassword
+        parpassword1,
+        parpassword2
+        // parpassword
     })
 
     newParent.save().then(()=>{
@@ -44,9 +44,9 @@ router.route("/update/:id").put(async(req, res)=>{
     const {name,age,gender} = req.body;
 
     const updateParent = {
-        name,
-        age,
-        gender
+        // name,
+        // age,
+        // gender
     }
 
     const update = await Parent.findByIdAndUpdate(userID,updateParent).then(()=>{
