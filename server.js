@@ -26,9 +26,11 @@ connection.once("open", ()=> {
 
 const studentRouter = require("./routes/students");
 const parentRouter = require("./routes/parents");
+const instructorRouter = require("./routes/instructors");
 
 app.use("/student", studentRouter);
 app.use("/parent", parentRouter);
+app.use("/instructor", instructorRouter);
 
 
 app.listen(PORT, ()=> {

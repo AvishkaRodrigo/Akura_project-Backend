@@ -17,7 +17,7 @@ const studentSchema = new Schema({
         required : true,
     },
     stumobileno : {
-        type : Number,
+        type : String,
         required : true,
     },
     stugender : {
