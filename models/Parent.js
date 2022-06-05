@@ -28,19 +28,19 @@ const parentSchema = new Schema({
         type : String,
         required : true
     },
-    // parpassword1 : {
-    //     type : String,
-    //     required : true
-    // },
-    // parpassword2 : {
-        //     type : String,
-        //     required : true
-        // },
-        
-    parpassword : {
+    parpassword1 : {
         type : String,
         required : true
-    }
+    },
+    parpassword2 : {
+        type : String,
+        required : true
+    },
+    
+    // parpassword : {
+    //     type : String,
+    //     required : true
+    // }
     
     })
 

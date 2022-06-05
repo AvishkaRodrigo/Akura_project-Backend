@@ -3,22 +3,22 @@ const router = require('express').Router();
 
 router.route("/addStudent").post(( req , res)=>{
     
-    const fname = req.body.fname;
-    const lname = req.body.lname;
-    const email = req.body.email;
-    const mobileno = Number(req.body.mobileno);
-    const gender = req.body.gender;
-    const password1 = String(req.body.password1);
-    const password2 = String(req.body.password2);
+    const stufname = req.body.stufname;
+    const stulname = req.body.stulname;
+    const stuemail = req.body.stuemail;
+    const stumobileno = Number(req.body.stucontact);
+    const stugender = req.body.stugender;
+    const stupassword1 = String(req.body.stupassword1);
+    const stupassword2 = String(req.body.stupassword2);
 
     const newStudent = new Student({
-        fname,
-        lname,
-        email,
-        mobileno,
-        gender,
-        password1,
-        password2
+        stufname,
+        stulname,
+        stuemail,
+        stumobileno,
+        stugender,
+        stupassword1,
+        stupassword2
     })
 
     newStudent.save().then(()=>{
